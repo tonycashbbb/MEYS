@@ -1,0 +1,28 @@
+.tender__btn {
+    padding: 7px 20px;
+    width: 332px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    border: none;
+    background-color: #CB9AE1;
+
+    font-size: 17px;
+    font-weight: 500;
+    color: #fff;
+
+    transition: background-color 0.2s linear;
+}
+
+.tender__btn:hover {
+    background-color: #EEACFF;
+}
+
+.reply h1 {
+    margin: 40px 0 30px;
+}
+
+.reply textarea {
+    height: 450px;
+    margin-bottom: 30px;
+}

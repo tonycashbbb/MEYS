@@ -1,0 +1,107 @@
+.sidebar {
+    width: 25%;
+    height: 100%;
+}
+
+.inner {
+    padding: 123px 15px 30px;
+}
+
+/* Sidebar Blocks */
+
+.block {
+    /*border: 1px solid #999;*/
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    background-color: #F4F4F4;
+}
+
+.block:last-child {
+    margin-top: 50px;
+}
+
+.header {
+    padding: 20px;
+    border-bottom: 1px solid #CB9AE1;
+}
+
+.title {
+    font-size: 22px;
+    font-weight: 500;
+
+    margin-bottom: 12px;
+}
+
+.links {
+    padding: 20px;
+    font-size: 18px;
+}
+
+.links li {
+    margin-bottom: 8px;
+}
+
+.links li:last-child {
+    margin-bottom: 0;
+}
+
+.links li a:hover {
+    color: #EEACFF;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.links li a {
+    color: #000;
+
+    transition: color 0.1s linear;
+}
+
+.acc__block {
+    padding: 20px 0 0 0;
+    font-size: 18px;
+}
+
+.email {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #CB9AE1;
+}
+
+.email__text {
+    padding-left: 20px;
+}
+
+.firm__info {
+    padding: 20px;
+}
+
+.firm__title {
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+
+.firm__info li {
+    margin-bottom: 8px;
+}
+
+.edit button {
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    border: 1.5px solid #999;
+    padding: 5px 8px;
+    font-size: 15px;
+
+    transition: border-top-color 0.2s linear,
+                border-right-color-color 0.2s linear,
+                border-bottom-color-color 0.2s linear,
+                border-left-color 0.2s linear,
+                background-color 0.2s linear;
+}
+
+.edit button:hover {
+    background-color: #fff;
+    border: 1.5px solid #CB9AE1;
+}

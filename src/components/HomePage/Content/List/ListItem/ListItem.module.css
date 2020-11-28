@@ -1,0 +1,21 @@
+.inner {
+
+}
+
+.title {
+    margin-bottom: 10px;
+}
+
+.title a {
+    color: #000;
+    font-size: 22px;
+}
+
+.title a:hover {
+    text-decoration: underline;
+}
+
+.description {
+    font-size: 14px;
+    line-height: 18px;
+}

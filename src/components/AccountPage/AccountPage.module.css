@@ -1,0 +1,4 @@
+.account__page {
+    display: flex;
+    justify-content: space-around;
+}
