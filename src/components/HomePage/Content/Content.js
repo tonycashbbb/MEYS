@@ -3,8 +3,7 @@ import s from './Content.module.css';
 import List from "./List/List";
 
 const Content = (props) => {
-
-  const { title } = props;
+  const { title, listItemsData } = props;
 
   return (
     <div className={s.content}>
@@ -15,7 +14,7 @@ const Content = (props) => {
         <div className={s.search}>
           <input type="text" placeholder={"Szukaj"}/>
         </div>
-        <List/>
+        <List listItemsData={listItemsData}/>
       </div>
     </div>
   );
