@@ -33,6 +33,10 @@
     margin-bottom: 12px;
 }
 
+.username {
+    font-size: 18px;
+}
+
 .links {
     padding: 20px;
     font-size: 18px;

@@ -13,41 +13,32 @@ import Auth from "./components/Auth/Auth";
 
 export default class App extends React.Component {
 
-  state = {
-    dataAboutUserFromServer: {
-      id: 'uniq user key',
-      username: 'tonycashbbb',
-      email: 'tonycashbbb@mail.ru',
-      nameOfTheBusiness: 'amazon',
-      NIP: 'some NIP-number',
-      Country: 'USA',
-      City: 'Los Angeles, CA',
-      Industry: 'Retail',
-      isLogged: false
+  toggleIsLogged(isLogged) {
+    if (isLogged) {
+      isLogged = false;
+    } else {
+      isLogged = true;
     }
   }
 
-  toggleIsLogged() {
-    this.setState(({ dataAboutUserFromServer }) => {
-      return !dataAboutUserFromServer.isLogged
-    })
-  }
-
   render() {
-    const { dataAboutUserFromServer } = this.state;
-    const { isLogged } = dataAboutUserFromServer;
+    const { homePage, accountPage, userData } = this.props.state;
+    const { homeListItemsData } = homePage;
+    const { accountListItemsData } = accountPage;
+
+    const { isLogged } = userData[0];
 
     return (
       <BrowserRouter>
         <div className="wrapper">
-          <Header isLogged={isLogged}/>
+          <Header isLogged={isLogged} />
           <div className="content">
             <Route exact path={"/"} component={IntroPage}/>
             {/* to component <Auth/> as the props give function toggleIsLogged
             to toggle isLogged status to change btn (Zaloguj się / Konto) */}
-            <Route path={"/auth"} component={Auth}/>
-            <Route path={"/home"} component={HomePage}/>
-            <Route path={"/account"} component={AccountPage}/>
+            <Route path={"/auth"} component={Auth} toggleIsLogged={() => this.toggleIsLogged(isLogged)} />
+            <Route path={"/home"} render={ () => <HomePage homeListItemsData={homeListItemsData} userData={userData}/> }/>
+            <Route path={"/account"} render={ () => <AccountPage accountListItemsData={accountListItemsData} userData={userData}/> }/>
             <Route path={"/create_tender"} component={CreateTender}/>
             <Route path={"/my_tenders"} component={MyTender}/>
             <Route path={"/reply_to_tender"} component={ReplyToTender}/>

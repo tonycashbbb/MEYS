@@ -10,7 +10,7 @@ const LoginForm = (props) => {
     <form action="#" method={"POST"} className={s.form}>
       <input type="text" placeholder={"Adres e-mail lub numer telefonu"}/>
       <input type="text" placeholder={"Haslo"}/>
-      <div className={s.link__toHome}>
+      <div className={s.link__toHome} onClick={props.toggleIsLogged}>
         <NavLink to="/home">Zaloguj się</NavLink>
       </div>
       <div className={s.link}>
